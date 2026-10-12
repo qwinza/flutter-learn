@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
-// Perbaiki jalurnya agar menunjuk ke dalam folder features/services/screens/
-import 'features/services/screens/layanan_menu_page.dart';
+import 'home_page.dart';
 
 void main() {
   runApp(const MyApp());
@@ -13,11 +12,19 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      title: 'Widget Menu',
+      title: 'Aplikasi Profil Mahasiswa',
       theme: ThemeData(
+        colorScheme: ColorScheme.fromSeed(seedColor: const Color(0xFF1976D2)),
         useMaterial3: true,
+        scaffoldBackgroundColor: Colors.white,
+        appBarTheme: const AppBarTheme(
+          backgroundColor: Color(0xFF1976D2),
+          foregroundColor: Colors.white,
+          centerTitle: true,
+          elevation: 0,
+        ),
       ),
-      home: const LayananMenuPage(),
+      home: const HomePage(),
     );
   }
 }
